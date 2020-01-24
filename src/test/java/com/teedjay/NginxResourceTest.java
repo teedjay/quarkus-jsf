@@ -27,7 +27,7 @@ public class NginxResourceTest {
           .when().get("/")
           .then()
              .statusCode(200)
-             .body(containsString("<p><em>Thank you for using nginx.</em></p>"));
+             .body(containsString("<p><em>Thank 2 you for using nginx.</em></p>"));
     }
 
 }
