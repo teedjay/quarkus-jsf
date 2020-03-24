@@ -10,11 +10,10 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.containsString;
 
 @Testcontainers
-public class NginxResourceTest {
+public class NginxResourceIT {
 
     @Container
-    public NginxContainer nginx = new NginxContainer<>()
-        .waitingFor(new HttpWaitStrategy());
+    public NginxContainer nginx = new NginxContainer<>().waitingFor(new HttpWaitStrategy());
 
     @Test
     public void testNginxEndpoint() {
