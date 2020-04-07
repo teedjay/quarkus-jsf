@@ -17,25 +17,35 @@
 
             <h1>JSF Demo</h1>
 
-            <div id="mydiv">This is a verified from tests</div>
+            <div id="mydiv">This text is verified from tests</div>
 
             <h:form id="form">
 
             </h:form>
 
-            <!--
             <p:tabView>
-                <p:tab title="Tab One">
-                    <h:outputText value="Lorem" />
+                <p:tab title="RequestScoped">
+                    <h:outputText value="#{scopedBeanForRequest.msg}" />
+                    <h:form id="request_clicks">
+                        <p:commandButton action="#{scopedBeanForRequest.onClick()}" update="request_clicks" value="Increment Click Counter"/>
+                        <div>Request har vært klikket #{scopedBeanForRequest.clickCount} ganger</div>
+                    </h:form>
                 </p:tab>
-                <p:tab title="Tab Two">
-                    <h:outputText value="Ipsum" />
+                <p:tab title="ViewScoped">
+                    <h:outputText value="#{scopedBeanForView.msg}" />
+                    <h:form id="view_clicks">
+                    <p:commandButton action="#{scopedBeanForView.onClick()}" update="view_clicks" value="Increment Click Counter"/>
+                    <div>View har vært klikket #{scopedBeanForView.clickCount} ganger</div>
+                    </h:form>
                 </p:tab>
-                <p:tab title="Tab Three">
-                    <h:outputText value="Dolor" />
+                <p:tab title="ApplicationScoped">
+                    <h:outputText value="#{scopedBeanForApplication.msg}" />
+                    <h:form id="application_clicks">
+                        <p:commandButton action="#{scopedBeanForApplication.onClick()}" update="application_clicks" value="Increment Click Counter"/>
+                        <div>Application har vært klikket #{scopedBeanForApplication.clickCount} ganger</div>
+                    </h:form>
                 </p:tab>
             </p:tabView>
-            -->
 
         </h:body>
 

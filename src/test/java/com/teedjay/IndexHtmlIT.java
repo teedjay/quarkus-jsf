@@ -36,7 +36,7 @@ public class IndexHtmlIT {
             final HtmlDivision datatable = (HtmlDivision) page.getElementById("mydiv");
 
             assertNotNull(datatable);
-            assertEquals("This is a verified from tests", datatable.getTextContent());
+            assertEquals("This text is verified from tests", datatable.getTextContent());
 
             // assertEquals(10, datatable.getByXPath("//tr[contains(@role,'row') and contains(@class,'ui-datatable-selectable')]").size());
         }
