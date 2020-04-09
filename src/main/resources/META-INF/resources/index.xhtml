@@ -11,17 +11,21 @@
 
         <h:body>
 
-            <p:growl>
-                <p:autoUpdate />
-            </p:growl>
+            <div class="ui-g">
+                <div class="ui-g-4">Growl 1/3
+                    <p:growl>
+                        <p:autoUpdate />
+                    </p:growl>
+                </div>
+                <div id="mydiv" class="ui-g-4">This text is verified from tests</div>
+                <div class="ui-g-4">
+                    Form 1/3
+                    <h:form id="form">
+                    </h:form>
+                </div>
+            </div>
 
             <h1>JSF Demo</h1>
-
-            <div id="mydiv">This text is verified from tests</div>
-
-            <h:form id="form">
-
-            </h:form>
 
             <p:tabView>
                 <p:tab title="RequestScoped">

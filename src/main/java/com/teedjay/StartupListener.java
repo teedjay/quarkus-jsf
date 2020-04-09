@@ -9,6 +9,7 @@ public class StartupListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
+        // https://primefaces.github.io/primefaces/8_0/#/gettingstarted/configuration
         sce.getServletContext().setInitParameter("primefaces.THEME", "luna-amber");
     }
 

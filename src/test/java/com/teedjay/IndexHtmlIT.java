@@ -33,10 +33,9 @@ public class IndexHtmlIT {
 
             final HtmlPage page = webClient.getPage(url + "/index.xhtml");
 
-            final HtmlDivision datatable = (HtmlDivision) page.getElementById("mydiv");
-
-            assertNotNull(datatable);
-            assertEquals("This text is verified from tests", datatable.getTextContent());
+            final HtmlDivision knownDIV = (HtmlDivision) page.getElementById("mydiv");
+            assertNotNull(knownDIV);
+            assertEquals("This text is verified from tests", knownDIV.getTextContent());
 
             // assertEquals(10, datatable.getByXPath("//tr[contains(@role,'row') and contains(@class,'ui-datatable-selectable')]").size());
         }
