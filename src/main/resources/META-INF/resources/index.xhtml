@@ -38,6 +38,13 @@
                     <div>View har vært klikket #{scopedBeanForView.clickCount} ganger</div>
                     </h:form>
                 </p:tab>
+                <p:tab title="SessionScoped">
+                    <h:outputText value="#{scopedBeanForSession.msg}" />
+                    <h:form id="session_clicks">
+                        <p:commandButton action="#{scopedBeanForSession.onClick()}" update="session_clicks" value="Increment Click Counter"/>
+                        <div>View har vært klikket #{scopedBeanForSession.clickCount} ganger</div>
+                    </h:form>
+                </p:tab>
                 <p:tab title="ApplicationScoped">
                     <h:outputText value="#{scopedBeanForApplication.msg}" />
                     <h:form id="application_clicks">
