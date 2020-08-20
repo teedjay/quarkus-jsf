@@ -29,29 +29,33 @@
 
             <p:tabView>
                 <p:tab title="RequestScoped">
-                    <h:outputText value="#{scopedBeanForRequest.msg}" />
                     <h:form id="request_clicks">
+                        <h:outputText value="#{scopedBeanForRequest.msg}" />
+                        <br/>
                         <p:commandButton action="#{scopedBeanForRequest.onClick()}" update="request_clicks" value="Increment Click Counter"/>
                         <div>Request har vært klikket #{scopedBeanForRequest.clickCount} ganger</div>
                     </h:form>
                 </p:tab>
                 <p:tab title="ViewScoped">
-                    <h:outputText value="#{scopedBeanForView.msg}" />
                     <h:form id="view_clicks">
-                    <p:commandButton action="#{scopedBeanForView.onClick()}" update="view_clicks" value="Increment Click Counter"/>
-                    <div>View har vært klikket #{scopedBeanForView.clickCount} ganger</div>
+                        <h:outputText value="#{scopedBeanForView.msg}" />
+                        <br/>
+                        <p:commandButton action="#{scopedBeanForView.onClick()}" update="view_clicks" value="Increment Click Counter"/>
+                        <div>View har vært klikket #{scopedBeanForView.clickCount} ganger</div>
                     </h:form>
                 </p:tab>
                 <p:tab title="SessionScoped">
-                    <h:outputText value="#{scopedBeanForSession.msg}" />
                     <h:form id="session_clicks">
+                        <h:outputText value="#{scopedBeanForSession.msg}" />
+                        <br/>
                         <p:commandButton action="#{scopedBeanForSession.onClick()}" update="session_clicks" value="Increment Click Counter"/>
                         <div>View har vært klikket #{scopedBeanForSession.clickCount} ganger</div>
                     </h:form>
                 </p:tab>
                 <p:tab title="ApplicationScoped">
-                    <h:outputText value="#{scopedBeanForApplication.msg}" />
                     <h:form id="application_clicks">
+                        <h:outputText value="#{scopedBeanForApplication.msg}" />
+                        <br/>
                         <p:commandButton action="#{scopedBeanForApplication.onClick()}" update="application_clicks" value="Increment Click Counter"/>
                         <div>Application har vært klikket #{scopedBeanForApplication.clickCount} ganger</div>
                     </h:form>
