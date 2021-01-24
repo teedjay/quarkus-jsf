@@ -11,16 +11,16 @@
     <properties>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
         <maven.compiler.parameters>true</maven.compiler.parameters>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.release>15</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus-plugin.version>1.7.0.Final</quarkus-plugin.version>
+        <quarkus-plugin.version>1.11.0.Final</quarkus-plugin.version>
         <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
-        <quarkus.platform.version>1.7.0.Final</quarkus.platform.version>
+        <quarkus.platform.version>1.11.0.Final</quarkus.platform.version>
         <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
-        <myfaces.version>2.3-next-M3</myfaces.version>
+        <myfaces.version>2.3-next-M4</myfaces.version>
+        <primefaces.version>10.0.0-RC1</primefaces.version>
     </properties>
 
     <dependencyManagement>
@@ -47,7 +47,7 @@
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>8.0</version>
+            <version>${primefaces.version}</version>
         </dependency>
 
         <!-- MyFaces Core Bean Validation support disabled
@@ -167,8 +167,8 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>prepare</goal>
-                            <goal>prepare-tests</goal>
+                            <goal>generate-code</goal>
+                            <goal>generate-code-tests</goal>
                             <goal>build</goal>
                         </goals>
                     </execution>
