@@ -14,11 +14,6 @@ pipeline {
          sh "mvn clean test"
        }
      }
-     stage('Create HTML reports') {
-       steps {
-         sh "mvn surefire-report:report"
-       }
-     }
   }
   post {
     always {
