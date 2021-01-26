@@ -19,7 +19,7 @@ pipeline {
     always {
         junit 'target/target/surefire-reports/*.xml'
     }
-  }:wq
+  }
   tools {
     maven 'maven 3.6.2'
     jdk 'JDK11'
