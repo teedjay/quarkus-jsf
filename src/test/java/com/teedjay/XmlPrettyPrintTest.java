@@ -12,7 +12,6 @@ import java.io.StringReader;
 import java.io.StringWriter;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class XmlPrettyPrintTest {
 
@@ -50,16 +49,6 @@ public class XmlPrettyPrintTest {
 
         assertEquals("<xml><abc>hsjdks</abc><def>djfdfjkdf</def></xml>", strippedForTabsAndNewLine);
 
-    }
-
-    @Test
-    public void alwaysSuccess() {
-        assertTrue(true);
-    }
-
-    @Test
-    public void alwaysFailure() {
-        assertTrue(false);
     }
 
 }
