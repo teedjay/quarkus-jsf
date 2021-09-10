@@ -29,6 +29,9 @@ target/
 # MacOS files
 .DS_Store
 
+# Local and personal ENV settings
+.env
+
 # Vim
 *.swp
 *.swo

@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @QuarkusTest
-public class IndexHtmlIT {
+public class IndexHtmlTest {
 
     @TestHTTPResource
     URL url;
@@ -40,4 +40,5 @@ public class IndexHtmlIT {
             // assertEquals(10, datatable.getByXPath("//tr[contains(@role,'row') and contains(@class,'ui-datatable-selectable')]").size());
         }
     }
+
 }

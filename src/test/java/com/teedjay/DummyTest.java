@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DummyTest {
 
-
     @Test
     public void alwaysSuccess() {
         assertTrue(true);
@@ -17,5 +16,5 @@ public class DummyTest {
     public void neverFail() {
         assertFalse(false);
     }
-    
+
 }

@@ -9,12 +9,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build in Docker with JDK15
+    - name: Build in Docker with JDK16
       run: |
         docker run -i --rm \
             -v /var/run/docker.sock:/var/run/docker.sock \
             -v "$HOME:$HOME" \
             -v "$PWD:$PWD" \
             -w "$PWD" \
-            openjdk:15-jdk-slim \
+            openjdk:16-jdk-slim \
             ./mvnw -B package --file pom.xml

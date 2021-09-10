@@ -21,7 +21,7 @@ public class ScopedBeanForView {
     }
 
     public void onClick() {
-        int number = clicks.incrementAndGet();
+        clicks.incrementAndGet();
     }
 
 }
