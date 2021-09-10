@@ -2,6 +2,7 @@
 Testing Quarkus with JSF (MyFaces) and PrimeFaces
 
 ## TODO
+- [x] Adding Primeflex and Primeblocks
 - [ ] Test out lit-html templating with lit-elemets as basis
 - [ ] WC native (pure WebComponents)
 - [ ] WC + lit-html

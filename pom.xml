@@ -53,6 +53,17 @@
             <version>${primefaces.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-webjars-locator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>primeflex</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
         <!-- MyFaces Core Bean Validation support disabled
         <dependency>
             <groupId>javax.validation</groupId>
