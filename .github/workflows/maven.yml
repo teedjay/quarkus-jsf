@@ -17,4 +17,4 @@ jobs:
             -v "$PWD:$PWD" \
             -w "$PWD" \
             openjdk:16-jdk-slim \
-            ./mvnw -B package --file pom.xml
+            ./mvnw -B package -Dmaven.test.skip=true --file pom.xml
