@@ -10,8 +10,7 @@ import static org.hamcrest.CoreMatchers.is;
 @QuarkusTest
 public class UsersResourceTest {
 
-    String json =
-        """
+    String json = """
         {
             "username" : "teedjay",
             "email" : "root@teedjay.com"
@@ -19,7 +18,7 @@ public class UsersResourceTest {
         """;
 
     @Test
-    public void testHelloEndpoint() {
+    public void insertNewUser() {
         given()
             .body(json)
           .when()
@@ -28,7 +27,20 @@ public class UsersResourceTest {
             .post("/users")
           .then()
             .statusCode(200)
-            .body("email", is("root@teedjay.com"));
+            .body("email", is("root@teedjay.com"))
+        ;
+    }
+
+    @Test
+    public void lookupKnownUser() {
+        given()
+          .when()
+            .accept(ContentType.JSON)
+            .get("/users/2")
+          .then()
+            .statusCode(200)
+            .body("username", is("ola"))
+        ;
     }
 
 }

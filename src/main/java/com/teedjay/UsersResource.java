@@ -1,5 +1,8 @@
 package com.teedjay;
 
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
+import org.jboss.resteasy.annotations.jaxrs.PathParam;
+
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -8,11 +11,18 @@ import java.util.List;
 @Path("/users")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
+@Tag(name = "users", description = "Repository for CRUD of users")
 public class UsersResource {
 
     @GET
     public List<Users> getAllUsers() {
         return Users.listAll();
+    }
+
+    @GET
+    @Path("{id}")
+    public Users getAllUsers(@PathParam Integer id) {
+        return Users.findById(id);
     }
 
     @POST
